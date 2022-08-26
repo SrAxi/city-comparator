@@ -1,12 +1,8 @@
 import {
   Link as ChakraLink,
   Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
+  Stack,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
 
 import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
@@ -15,43 +11,35 @@ import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
 import Counter from '../features/counter/Counter'
+import { CityPicker } from '../components/CityPicker'
 
 const Index = () => (
   <Container height="100vh">
     <Hero />
     <Main>
-      <Text color="text">
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>TypeScript</Code>.
-      </Text>
+      <Stack spacing={8} direction="row">
+        <CityPicker
+          title="City A"
+        />
+        <CityPicker
+          title="City B"
+        />
+      </Stack>
 
-      <List spacing={3} my={0} color="text">
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
       {/*<Counter />*/}
     </Main>
 
     <DarkModeSwitch />
+    {/*<CTA />*/}
     <Footer>
-      <Text>Next ❤️ Chakra</Text>
+      <Text>Copyright &copy;{new Date().getFullYear()}&nbsp;
+        <ChakraLink
+          href={'https://www.linkedin.com/in/riccardopolacci/'}
+          variant="green"
+          target={'_blank'}
+        >Riccardo Polacci</ChakraLink>
+      </Text>
     </Footer>
-    <CTA />
   </Container>
 )
 
