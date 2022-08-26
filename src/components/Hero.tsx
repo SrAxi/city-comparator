@@ -3,7 +3,7 @@ import { Flex, Heading } from '@chakra-ui/react'
 export const Hero = ({ title }: { title: string }) => (
   <Flex
     justifyContent="center"
-    alignItems="center"
+    alignItems="baseline"
     height="100vh"
     bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
     bgClip="text"
@@ -13,5 +13,5 @@ export const Hero = ({ title }: { title: string }) => (
 )
 
 Hero.defaultProps = {
-  title: 'with-chakra-ui-typescript',
+  title: 'City Comparator',
 }

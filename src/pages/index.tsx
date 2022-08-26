@@ -14,6 +14,7 @@ import { Main } from '../components/Main'
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { CTA } from '../components/CTA'
 import { Footer } from '../components/Footer'
+import Counter from '../features/counter/Counter'
 
 const Index = () => (
   <Container height="100vh">
@@ -43,6 +44,7 @@ const Index = () => (
           </ChakraLink>
         </ListItem>
       </List>
+      {/*<Counter />*/}
     </Main>
 
     <DarkModeSwitch />
